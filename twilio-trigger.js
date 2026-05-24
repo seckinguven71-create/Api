@@ -3,7 +3,7 @@ const twilio = require('twilio');
 
 // Twilio Konsolundan alacağın gizli anahtarlar (Güvenli Alan)
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = 'ACcbd6d955c6e9905a0a2ff57f25c9c78d';
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilioNumber = process.env.TWILIO_PHONE_NUMBER;
 
 const client = twilio(accountSid, authToken);
