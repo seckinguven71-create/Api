@@ -29,7 +29,7 @@ export default async function handler(req, res) {
         // 1. ÖNCE SMS GÖNDERİLİR
         await client.messages.create({
             body: message,
-            messagingServiceSid: twilioNumber,
+            from: twilioNumber,
             to: toNumber
         });
 
@@ -48,7 +48,7 @@ export default async function handler(req, res) {
 
         await client.calls.create({
             url: twimlUrl,
-            messagingServiceSid: twilioNumber,
+            from: twilioNumber,
             to: toNumber
         });
 
