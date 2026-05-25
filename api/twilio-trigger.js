@@ -48,7 +48,7 @@ export default async function handler(req, res) {
 
         await client.calls.create({
             url: twimlUrl,
-            from: twilioNumber,
+            messagingServiceSid: twilioNumber,
             to: toNumber
         });
 
