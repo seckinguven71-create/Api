@@ -29,8 +29,8 @@ export default async function handler(req, res) {
         // 1. ÖNCE SMS GÖNDERİLİR
         await client.messages.create({
             body: message,
-            from: twilioNumber,
-            to: toNumber
+            from: 'whatsapp:+14155238886',
+            to: 'whatsapp:' + toNumber
         });
 
         // 2. ARDINDAN TELEFON ARANIR
